@@ -1,5 +1,6 @@
-import {HeaderComponent} from "../../components/Header"
-
+// Components
+import { HeaderComponent } from "../../components/Header"
+import { FooterComponent } from "../../components/Footer"
 interface ILayoutProps {
   children: React.ReactNode
 }
@@ -11,7 +12,7 @@ export const BaseLayout: React.FC = ({ children }) => {
       <main className="main-container">
         {children}
       </main>
-      <footer>Подвал сайта</footer>
+      <FooterComponent />
     </>
   )
 }

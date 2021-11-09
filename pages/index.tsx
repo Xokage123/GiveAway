@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Home: NextPage = () => {
   return (
     <>
-      Старт проекта
+      Начальная страница
     </>
   )
 }

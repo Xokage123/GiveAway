@@ -1,0 +1,33 @@
+.Footer {
+  font-family: 'ProximaNova';
+  font-size: 18px;
+  line-height: 22px;
+
+  &Top {
+    background-color: #F5F5F5;
+    padding: 30px 0 50px;
+
+    &_Container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 252px;
+    }
+
+    &_Information,
+    &_List {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &_Title {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  &Bottom {
+    background-color: white;
+    padding: 20px 0;
+  }
+}
