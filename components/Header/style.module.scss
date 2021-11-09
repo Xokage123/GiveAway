@@ -1,0 +1,93 @@
+.Header {
+  background-color: #EEEEEE;
+
+  &Container {
+    padding: 0 73px 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 98px;
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 30px;
+    max-width: 619px;
+    font-family: 'ProximaNova';
+
+    &_Title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 58px;
+      margin: 0;
+    }
+
+    &_Description {
+      max-width: 529px;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: 'ProximaNova';
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+}
+
+@media all and (max-width: 1279px) {
+  .Header {
+    &Container {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 43px 0 41px;
+      gap: 57px;
+    }
+
+    &Text {
+      max-width: 387px;
+      padding: 15px 0 20px;
+
+      &_Title {
+        font-size: 30px;
+        line-height: 37px;
+      }
+
+      &_Description {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .Header {
+    &Container {
+      padding: 0 31px;
+      gap: 3px;
+    }
+
+    &Text {
+      padding: 10px 0 0 0;
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .Header {
+    &Text {
+      align-items: center;
+      &_Title {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &_Description {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+      }
+    }
+  }
+}
