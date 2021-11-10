@@ -1,0 +1,184 @@
+.Product {
+  &_Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 50px;
+    padding-top: 50px;
+  }
+
+  &Information {
+    &_Title {
+      margin: 0;
+      padding-bottom: 20px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    &_Subtitle {
+      padding-bottom: 6px;
+      font-weight: 700;
+    }
+
+    &_Description {
+      max-width: 340px;
+      padding-bottom: 30px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &_Amount {
+      display: inline-block;
+      padding: 5px 10px;
+      color: white;
+      background: #E40000;
+      border-radius: 5px;
+    }
+
+    &_Rating {
+      &Container {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+      }
+
+      &Title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &_Price {
+      &Container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+      }
+
+      &Old {
+        text-transform: uppercase;
+        text-decoration-line: line-through;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      &New {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+      }
+    }
+
+    &_Button {
+      &Select {
+        padding: 19px 157px;
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    }
+
+    &_Amazon {
+      &Container {
+        display: flex;
+        justify-content: center;
+        max-width: 380px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+.Photos {
+  &_Container {
+    display: flex;
+    gap: 30px;
+    padding: 40px 30px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  &Swiper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 120px;
+
+    &_Item {
+      button {
+        padding: 5px;
+        border: 1px solid #DDDDDD;
+        border-radius: 3px;
+
+        &:focus {
+          border: 1px solid #2196F3;
+        }
+      }
+    }
+  }
+}
+
+.Overview {
+  &Container {
+    padding: 50px 0;
+  }
+
+  &Title {
+    padding-bottom: 10px;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &Item {
+    &_Title {
+      color: black;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .Product {
+    &_Container {
+      grid-template-columns: 354px 294px;
+      gap: 40px;
+    }
+
+    &Information {
+      &_Title {
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      &_Button {
+        &Select {
+          width: 100%;
+          padding: 11px 115px;
+        }
+      }
+    }
+  }
+
+  .Photos {
+    &_Container {
+      gap: 20px;
+    }
+
+    &Swiper {
+      &_Item {
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+}

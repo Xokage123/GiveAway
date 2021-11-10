@@ -2,11 +2,12 @@
   background-color: #EEEEEE;
 
   &Container {
-    padding: 0 73px 0 50px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: center;
     gap: 98px;
+    padding: 0 73px 0 50px;
   }
 
   &Text {
@@ -39,7 +40,7 @@
   .Header {
     &Container {
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       padding: 0 43px 0 41px;
       gap: 57px;
     }
@@ -78,6 +79,7 @@
   .Header {
     &Text {
       align-items: center;
+
       &_Title {
         font-size: 20px;
         line-height: 24px;

@@ -8,9 +8,8 @@
     padding: 30px 0 50px;
 
     &_Container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 252px;
+      display: flex;
+      justify-content: space-between;
     }
 
     &_Information,
@@ -30,4 +29,12 @@
     background-color: white;
     padding: 20px 0;
   }
+}
+
+@media all and (max-width: 1024px) {
+
+}
+
+@media all and (max-width: 767px) {
+  
 }
