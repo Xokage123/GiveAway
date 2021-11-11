@@ -1,8 +1,9 @@
 // Next
 import type { NextPage } from 'next'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 // React
 import { useState } from 'react'
-import Image from 'next/image'
 // Helpers
 import useWindowSize from '../helpers/useWindowSizeHook'
 // SVG
@@ -57,6 +58,8 @@ const overviewArrayInformation: Array<IOverviewArrayInformation> = [
 
 const Home: NextPage = () => {
   const [mainPhoto, setMainPhoto] = useState<StaticImageData>(Photo_1)
+
+  const router = useRouter()
 
   const { width } = useWindowSize()
 
@@ -125,7 +128,9 @@ const Home: NextPage = () => {
             <p className={Styles.ProductInformation_PriceOld}>US$25.89</p>
             <p className={Styles.ProductInformation_PriceNew}>$0.00 FREE</p>
           </div>
-          <button className={Styles.ProductInformation_ButtonSelect}>SELECT</button>
+          <button onClick={() => {
+            router.push('/step_1')
+          }} className={Styles.ProductInformation_ButtonSelect}>SELECT</button>
           <div className={Styles.ProductInformation_AmazonContainer}>
             <SVG_AmazonPrime />
           </div>

@@ -13,7 +13,7 @@ export const HowThisWorkComponent: React.FC = () => {
     <ul className={Styles.List}>
       <li className={Styles.Item}>
         <div className={Styles.ItemBall}>
-          Easy as<br />1-2-3
+          Easy<br />as<br />1-2-3
         </div>
       </li>
       <SVG_HowWorkRow />

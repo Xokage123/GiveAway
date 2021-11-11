@@ -1,0 +1,57 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 113px 0 112px;
+}
+
+.Content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+}
+
+.Roadmap {
+  margin-right: 141px;
+}
+
+.Information {
+  &_Container {
+    max-width: 480px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &_Title {
+    padding-bottom: 40px;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  &_Subtitle {
+    max-width: 406px;
+    padding-bottom: 20px;
+    color: #000;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  &_Text {
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+
+  &_Button {
+    width: 100%;
+    max-width: 380px;
+    padding: 19px;
+    color: white;
+    background: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

@@ -47,10 +47,18 @@ img {
   object-fit: contain;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
-  list-style: none;
+}
+
+ol {
+  padding-left: 15px;
+}
+
+ul {
+    list-style: none;
 }
 
 * {

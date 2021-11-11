@@ -1,0 +1,94 @@
+.Container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 52px 0 50px;
+}
+
+.Content {
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+  padding-top: 20px;
+}
+
+.Roadmap {
+  margin-right: 141px;
+}
+
+.Information {
+  &_Container {
+    max-width: 486px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &_Title {
+    padding-bottom: 40px;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  &_Subtitle {
+    max-width: 406px;
+    padding-bottom: 20px;
+    color: #000;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  &_Text {
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &_List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  &_Item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 13px;
+
+    &Boll {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      color: white;
+      background: #000000;
+      border-radius: 100%;
+    }
+
+    &Text {
+      max-width: 418px;
+    }
+  }
+
+  &_Button {
+
+    width: 100%;
+    padding: 19px;
+    color: white;
+    background: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &Container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 380px;
+    }
+  }
+}
