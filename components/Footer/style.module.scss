@@ -31,10 +31,22 @@
   }
 }
 
-@media all and (max-width: 1024px) {
-
+@media all and (max-width: 767px) {
+  .Footer {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
-@media all and (max-width: 767px) {
-  
+@media all and (max-width: 400px) {
+  .Footer {
+    &Top {
+      &_Container {
+        display: grid;
+        grid-template-columns: repeat(2, 116px);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+  }
 }

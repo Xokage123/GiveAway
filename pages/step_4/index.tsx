@@ -4,11 +4,14 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 // Images
 import RoadMap from '../../public/image/step_4/road_map.png'
+import RoadMap_mobile from '../../public/image/step_4/road_map(320).png'
 import Product from '../../public/image/step_1/product.jpg'
+// Helpers
+import useWindowSize from '../../helpers/useWindowSizeHook'
 // SVG
 import SVG_Price from '../../public/icons/Price'
 // Styles
-import Styles from '../../styles/pages/step_4/style.module.scss'
+import Styles from '../../styles/pages/step/style.module.scss'
 import { FC } from 'react'
 
 interface IItemsProps {
@@ -36,16 +39,31 @@ const items: Array<IItemsProps> = [
 ]
 
 const Step: NextPage = () => {
+
   const router = useRouter()
+
+  const { width } = useWindowSize()
 
   return (
     <div className={Styles.Container}>
-      <Image className={Styles.Roadmap} src={RoadMap} alt={'road_map'} />
+      {
+        width >= 460 ?
+          (
+            <div className={Styles.Roadmap}>
+              <Image src={RoadMap} alt='road_map' />
+            </div>
+          ) :
+          (
+            <div className={Styles.Roadmap}>
+              <Image src={RoadMap_mobile} alt='road_map' />
+            </div>
+          )
+      }
       <div className={Styles.Content}>
         <section className={Styles.Information_Container}>
           <h2 className={Styles.Information_Title}>Step 4</h2>
           <h3 className={Styles.Information_Subtitle}>How to Buy a Product with 100% BONUS!</h3>
-          <ul className={Styles.Information_List}>
+          <ul className={Styles.Information_BonusList}>
             {
               items.map((el, index) => {
                 const { SVG, text } = el;
@@ -62,10 +80,18 @@ const Step: NextPage = () => {
             <button onClick={() => {
               router.push('/step_5')
             }} className={Styles.Information_Button}>Get Offer</button>
-            <span>I don't like offer terms</span>
+            <span style={{
+              display: 'block',
+              maxWidth: '380px',
+              textAlign: 'center',
+              paddingTop: '20px',
+              fontWeight: 'bold'
+            }}>I don't like offer terms</span>
           </div>
         </section>
-        <Image src={Product} alt={'road_map'} />
+        {
+          width >= 768 ? <Image width={width > 1024 ? 477 : 243} height={width > 1024 ? 501 : 255} src={Product} alt={'product'} /> : null
+        }
       </div>
     </div>
   )

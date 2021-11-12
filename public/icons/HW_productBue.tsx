@@ -24,7 +24,7 @@ const SVG_ProductBye: React.FC = () => {
           </defs>
         </svg>
       )
-    } else if (width < 1100 && width >= 768) {
+    } else if (width < 1100) {
       return (
         <svg width="41" height="48" viewBox="0 0 41 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_24:182)">
