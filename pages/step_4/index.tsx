@@ -86,7 +86,7 @@ const Step: NextPage = () => {
               textAlign: 'center',
               paddingTop: '20px',
               fontWeight: 'bold'
-            }}>I don't like offer terms</span>
+            }}>{`I don't like offer terms`}</span>
           </div>
         </section>
         {
